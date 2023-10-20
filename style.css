@@ -21,6 +21,7 @@ main {
   color: white;
   font-size: 6.5vw;
   text-align: end;
+  overflow-x: scroll;
 }
 
 .contenedor {
@@ -49,6 +50,7 @@ main {
   border:none;
   filter: contrast(100%);
   transition: border-radius 0.2s linear;
+  cursor: pointer;
 }
 
 .boton:active {
@@ -66,4 +68,16 @@ main {
 
 .resultado {
   background-color: rgb(9, 9, 129)
+}
+
+#parentesis {
+  cursor: not-allowed;
+  background-color: rgb(84, 84, 107);
+  pointer-events:none;
+}
+
+#porcentaje {
+  cursor: not-allowed;
+  background-color: rgb(84, 84, 107);
+  pointer-events:none;
 }
