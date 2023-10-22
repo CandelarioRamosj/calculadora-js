@@ -31,6 +31,7 @@ main {
   width: 30vw;
   border-radius: 10%;
   padding: 3vw;
+  box-shadow: 1px 1px 10px rgb(30, 30, 75);
 }
 
 .botones {
@@ -81,3 +82,28 @@ main {
   background-color: rgb(84, 84, 107);
   pointer-events:none;
 }
+
+
+/*Tablet*/
+/*Portrait*/
+@media (min-width: 576px) and (max-width: 991.98px) and (orientation:portrait) {
+  body{background: orange;}
+}
+
+/*landscape*/
+@media (min-width: 991.98px) and (max-width: 1199.98px)and (orientation:landscape) {
+  body{background: blue;}
+}
+/*fin tablet*/
+
+/*movil*/
+/*Portrait*/
+/*Default*/
+@media (max-width: 575.98px)and (orientation:portrait) {
+  body{background: green;}
+}
+/*landscape*/
+@media (min-width: 576px) and (max-width: 991.98px) and (orientation:landscape) {
+  body{background: black;}
+}
+/*fin movil*/
