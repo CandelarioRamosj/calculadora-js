@@ -9,8 +9,9 @@ for( let i = 0; i < boton.length; i++){
                   resultadoVar = ''
                   break;
       case "←" :  error()
-                  pantalla.value = pantalla.value.slice(0, pantalla.value.length -1)
-                  resultadoVar = resultadoVar.slice(0, resultadoVar.length - 1)
+                  pantalla.value = pantalla.value.slice(0, -1)
+                  resultadoVar = resultadoVar.slice(0, -1)
+                  console.log(resultadoVar)
                   break;
       case "•" :  error()
                   pantalla.value += '.'
@@ -93,9 +94,8 @@ function error(){
 
 function resultado(){
   try {
-    resultadoVar = eval(resultadoVar)
-    if(resultadoVar !== undefined){
-      pantalla.value = parseFloat(resultadoVar.toFixed(8))
+    if(resultadoVar !== undefined && resultadoVar !== ''){
+      pantalla.value = parseFloat(eval(resultadoVar).toFixed(8))
     }
   } catch (error) {
     pantalla.style.fontSize = '5vw' 
